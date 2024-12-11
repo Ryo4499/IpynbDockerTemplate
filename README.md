@@ -1,21 +1,13 @@
-# IpynbDockerTemplate
+# Ipynb Docker Template
 
-This is a Ipynb Docker Template.  
-The notebook user (NB_USER) in the container is bound on uid and gid of a local machine user.  
-It's to specified in `.env` file.  
-Also, this directory bind to volumes.  
+This is a Ipynb Docker Template.
 
-Base Images:
-- <https://hub.docker.com/r/jupyter/datascience-notebook>
-
-## How to use
+## Usage
 
 ```sh
-cp .env.sample .env
-# Specify your environments
-vi .env
-docker-compose build
-docker-compose up -d
-docker-compose down
+git clone $REPO_URL
+cd IpynbDockerTemplate
+docker compose build
+docker compose up -d
+docker compose exec app sh
 ```
-
