@@ -41,9 +41,9 @@ RUN apt-get update && apt-get install -y zsh sudo pipx vim tzdata software-prope
     echo $TZ > /etc/timezone && \
     ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 
-WORKDIR /home/${HOST_USER}/app
-
 USER ${HOST_USER}
+
+WORKDIR /home/${HOST_USER}/app
 
 ENV PATH="$PATH:/home/${HOST_USER}/.local/bin" \
     PATH="$PATH:/home/${HOST_USER}/.venv/bin" \
