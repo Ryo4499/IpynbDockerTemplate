@@ -10,7 +10,7 @@ ENV TZ $TZ
 ENV DEBIAN_FRONTEND noninteractive
 
 USER root
-ENV NB_USER="${HOST_USER}" \
+ENV NB_USER "${HOST_USER}" \
     NB_UID="${HOST_UID}" \
     NB_GID="${HOST_GID}" \
     HOME="/home/${HOST_USER}"
@@ -45,7 +45,7 @@ USER ${HOST_USER}
 
 WORKDIR /home/${HOST_USER}/app
 
-ENV PATH="$PATH:/home/${HOST_USER}/.local/bin" \
+ENV PATH "$PATH:/home/${HOST_USER}/.local/bin" \
     PATH="$PATH:/home/${HOST_USER}/.venv/bin" \
     PATH="$PATH:/home/${HOST_USER}/.local/pipx/venvs/poetry/bin"
 
